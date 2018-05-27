@@ -1,0 +1,5 @@
+django==2.0.5
+zbar-py==1.0.4
+numpy==1.14.2
+pillow==5.1.0
+psycopg2==2.7.4
