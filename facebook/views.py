@@ -28,7 +28,6 @@ def connection_handler(request):
     else:
         body = request.body.decode('utf-8')
         body = json.loads(body)
-        print('Request Body: \n{}',format(body))
 
         if body['object'] == 'page':
             for entry in body['entry']:
@@ -46,7 +45,8 @@ def connection_handler(request):
                             for att in attachments:
                                 if att['type'] == 'image':
                                     image_url = att['payload']['url']
-                                    barcode = scan(image_url)
+                                    # barcode = scan(image_url)
+                                    barcode = 4029764001807
                                     print("Scanned barcode: {}".format(barcode))
 
                                     try:
