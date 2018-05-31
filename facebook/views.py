@@ -43,7 +43,7 @@ def connection_handler(request):
                     if message is not None:
                         attachments = message.get('attachments', None)
 
-                        if attachments is not None:
+                        if attachments is not None and len(attachments) > 0:
                             att = attachments[0]
                             if att['type'] == 'image':
                                 image_url = att['payload']['url']
