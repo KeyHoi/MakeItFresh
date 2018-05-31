@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from facebook.views import connection_handler
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'webhook/', include('facebook.urls'))
+    path(r'webhook/', include('facebook.urls')),
+    path(r'makeitfresh.herokuapp.com/webhook/', connection_handler)
 ]
