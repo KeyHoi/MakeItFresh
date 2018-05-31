@@ -78,7 +78,20 @@ def connection_handler(request):
                                         assert res.status_code == 200
                                     except Exception as e:
                                         print(e)
+                        else:
+                            msg = c.JUST_IMG_MSG
+                            url = c.FB_SEND_API_URL
 
+                            res = requests.post(url, json={
+                                "recipient": {
+                                    "id": source_id
+                                },
+                                "message": {
+                                    "text": msg
+                                }
+                            })
+
+                            assert res.status_code == 200
             return HttpResponse(status=200)
         else:
             return HttpResponse(status=404)
