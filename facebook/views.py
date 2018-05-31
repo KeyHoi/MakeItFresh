@@ -15,7 +15,21 @@ def connection_handler(request):
     print(body)
 
     if request.method == 'GET':
-        return HttpResponse(status=200)
+        VERIFY_TOKEN = "3153b67bfc6c51a17fd558976844c6bf"
+
+        mode = request.GET.get('hub.mode')
+        token = request.GET.get('hub.verify_token')
+        challenge = request.GET.get('hub.challenge')
+        print(mode)
+        print(token)
+        print(challenge)
+
+        assert mode is not None
+        assert token is not None
+
+        if mode == 'subscribe' and token == VERIFY_TOKEN:
+            print("WEBHOOK VERIFIED")
+            return HttpResponse(status=200, content=challenge)
 
     if body['object'] == 'page':
         for entry in body['entry']:
