@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7873ead-279c-4629-9c38-c6a971d4496c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/facebook/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facebook/webhook" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/webhook" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,18 +13,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/facebook/webhook/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="154" column="58" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="58" />
-              <folding>
-                <element signature="e#1027#7542#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="scan_barcode.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scan_handler/scan_barcode.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,8 +28,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/facebook/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+            <state relative-caret-position="203">
+              <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -118,13 +105,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/facebook/webhook/node_modules" />
-  </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/facebook/webhook/package.json" />
-    </packageJsonPaths>
+    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="30" />
@@ -142,21 +124,6 @@
             <path>
               <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
               <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="facebook" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="make_it_fresh_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="scan_handler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -612,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scan_handler/scan_barcode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -632,10 +589,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/facebook/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="203">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
