@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7873ead-279c-4629-9c38-c6a971d4496c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/facebook/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facebook/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facebook/webhook" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/webhook" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
