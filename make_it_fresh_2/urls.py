@@ -21,5 +21,5 @@ from facebook.views import connection_handler
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'webhook/', include('facebook.urls')),
-    path(r'makeitfresh.herokuapp.com/webhook/', connection_handler)
+    # path(r'makeitfresh.herokuapp.com/webhook/', connection_handler)
 ]
