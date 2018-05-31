@@ -1,11 +1,12 @@
 import json
+
 import requests
-import constants as c
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from scan_handler.scan_barcode import scan
+import constants as c
 from scan_handler.models import Product, Receipt
+from scan_handler.scan_barcode import scan
 
 
 @csrf_exempt
@@ -82,3 +83,7 @@ def connection_handler(request):
     else:
         return HttpResponse(status=404)
 
+
+@csrf_exempt
+def http_get_handler(request, mode, token, challenge):
+    print('{}\n{}\n{}'.format(mode, token, challenge))
