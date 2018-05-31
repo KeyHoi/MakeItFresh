@@ -14,6 +14,9 @@ def connection_handler(request):
     body = json.loads(body)
     print(body)
 
+    if request.method == 'GET':
+        return HttpResponse(status=200)
+
     if body['object'] == 'page':
         for entry in body['entry']:
             for webhook_event in entry['messaging']:
