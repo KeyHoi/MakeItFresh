@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f7873ead-279c-4629-9c38-c6a971d4496c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/facebook/webhook" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/webhook" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scan_handler/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/scan_handler/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_it_fresh_2/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_it_fresh_2/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,6 +59,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/make_it_fresh_2/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/make_it_fresh_2/settings.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scan_handler/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -139,7 +148,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/scan_handler/test.py" />
-        <option value="$PROJECT_DIR$/make_it_fresh_2/wsgi.py" />
         <option value="$PROJECT_DIR$/scan_handler/admin.py" />
         <option value="$PROJECT_DIR$/facebook/tests.py" />
         <option value="$PROJECT_DIR$/facebook/webhook/fill.js" />
@@ -154,6 +162,7 @@
         <option value="$PROJECT_DIR$/facebook/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/scan_handler/models.py" />
+        <option value="$PROJECT_DIR$/make_it_fresh_2/wsgi.py" />
       </list>
     </option>
   </component>
@@ -572,16 +581,6 @@
     <entry file="file://$PROJECT_DIR$/facebook/webhook/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/make_it_fresh_2/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#231#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/facebook/webhook/fill.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -682,6 +681,13 @@
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_it_fresh_2/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
