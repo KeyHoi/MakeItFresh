@@ -44,40 +44,40 @@ def connection_handler(request):
                         attachments = message.get('attachments', None)
 
                         if attachments is not None:
-                            for att in attachments:
-                                if att['type'] == 'image':
-                                    image_url = att['payload']['url']
-                                    barcode = scan(image_url)
-                                    # barcode = 4029764001807
-                                    print("Scanned barcode: {}".format(barcode))
+                            att = attachments[0]
+                            if att['type'] == 'image':
+                                image_url = att['payload']['url']
+                                barcode = scan(image_url)
+                                # barcode = 4029764001807
+                                print("Scanned barcode: {}".format(barcode))
 
-                                    try:
-                                        product = Product.objects.get(barcode=barcode)
+                                try:
+                                    product = Product.objects.get(barcode=barcode)
 
-                                        receipt = Receipt.objects.get(product=product)
+                                    receipt = Receipt.objects.get(product=product)
 
-                                        receipt_json = receipt.receipt
-                                        print("Receipt: \n{}".format(receipt_json))
+                                    receipt_json = receipt.receipt
+                                    print("Receipt: \n{}".format(receipt_json))
 
-                                        msg = str(receipt_json['header']) + '\n\n'
-                                        for par in receipt_json['paragraphs']:
-                                            msg += par + '\n'
+                                    msg = str(receipt_json['header']) + '\n\n'
+                                    for par in receipt_json['paragraphs']:
+                                        msg += par + '\n'
 
-                                        print("Message: {}\n".format(msg))
+                                    print("Message: {}\n".format(msg))
 
-                                        url = c.FB_SEND_API_URL
-                                        res = requests.post(url, json={
-                                            "recipient": {
-                                                "id": source_id
-                                            },
-                                            "message": {
-                                                "text": msg
-                                            }
-                                        })
+                                    url = c.FB_SEND_API_URL
+                                    res = requests.post(url, json={
+                                        "recipient": {
+                                            "id": source_id
+                                        },
+                                        "message": {
+                                            "text": msg
+                                        }
+                                    })
 
-                                        assert res.status_code == 200
-                                    except Exception as e:
-                                        print(e)
+                                    assert res.status_code == 200
+                                except Exception as e:
+                                    print(e)
                         else:
                             msg = c.JUST_IMG_MSG
                             url = c.FB_SEND_API_URL
