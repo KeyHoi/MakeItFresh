@@ -8,8 +8,7 @@ https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/
 """
 
 import os
-import subprocess
-import sys
+from scan_handler import models
 
 from django.core.wsgi import get_wsgi_application
 

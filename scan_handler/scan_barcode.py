@@ -1,15 +1,18 @@
-import sys
+import os
+import urllib.request
+import urllib.request
+
 import numpy
 import zbar
-import zbar.misc
 from PIL import Image
 
 
-def main():
-    image_path = sys.argv[1]
+def scan(url):
+    file_path = './tmp.jpg'
 
     try:
-        image = Image.open(image_path)
+        urllib.request.urlretrieve(url, file_path)
+        image = Image.open(file_path)
 
         image_array = numpy.array(image.getdata(), numpy.uint8)
         scanner = zbar.Scanner()
@@ -19,14 +22,7 @@ def main():
             result = results[0]
             barcode = result.data.decode('utf-8')
 
-            print(barcode)
-        else:
-            raise Exception
+            return barcode
 
     except Exception as e:
         print("ERROR")
-
-
-if __name__ == '__main__':
-    if len(sys.argv) == 2:
-        main()
