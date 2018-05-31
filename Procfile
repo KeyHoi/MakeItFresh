@@ -1,1 +1,1 @@
-web: gunicorn MakeItFresh:app
+web: gunicorn make_it_fresh_2.wsgi
