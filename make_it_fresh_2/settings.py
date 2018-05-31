@@ -27,7 +27,7 @@ SECRET_KEY = '@+5hf=!moqia%1f)2i7(hklzq9jqwj=a2=29r_$d_%-%tjq*wt'
 DEBUG = True
 
 ALLOWED_HOSTS = ['makeitfresh.herokuapp.com']
-APPEND_SLASH=False
+# APPEND_SLASH=False
 
 # Application definition
 
