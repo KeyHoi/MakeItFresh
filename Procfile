@@ -1,1 +1,1 @@
-web: gunicorn makeitfresh.wsgi
+web: source env/bin/activate; python manage.py runserver
