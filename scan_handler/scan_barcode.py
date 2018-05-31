@@ -25,4 +25,4 @@ def scan(url):
             return barcode
 
     except Exception as e:
-        print("ERROR")
+        print("ERROR while scanning image")
