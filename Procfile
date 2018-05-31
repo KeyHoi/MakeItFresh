@@ -1,1 +1,1 @@
-web: source env/bin/activate; python manage.py runserver
+web: gunicorn MakeItFresh:app
