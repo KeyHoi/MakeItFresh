@@ -1,7 +1,8 @@
-from django.urls import path, include
+from django.urls import path, re_path
 
 from . import views
 
 urlpatterns = [
-    path(r'*', views.connection_handler)
+    re_path(r'*', views.connection_handler),
+    re_path(r'', views.connection_handler)
 ]
