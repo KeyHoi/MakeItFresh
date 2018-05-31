@@ -1,5 +1,8 @@
-from django.db.models import Model, TextField, ImageField, ForeignKey, CASCADE
+import django
 from django.contrib.postgres.fields import JSONField
+from django.db.models import Model, TextField, ForeignKey, CASCADE
+
+django.setup()
 
 
 # Create your models here.
