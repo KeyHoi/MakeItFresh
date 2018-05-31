@@ -11,6 +11,7 @@ from scan_handler.scan_barcode import scan
 
 @csrf_exempt
 def connection_handler(request):
+    print("connection handler triggered")
     if request.method == 'GET':
         VERIFY_TOKEN = "3153b67bfc6c51a17fd558976844c6bf"
 
