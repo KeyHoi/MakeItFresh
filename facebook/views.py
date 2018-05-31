@@ -37,10 +37,10 @@ def connection_handler(request):
                     print('Webhook Event: \n{}'.format(webhook_event))
 
                     source_id = webhook_event['sender']['id']
-                    message = webhook_event['message']
+                    message = webhook_event.get('message', None)
 
                     if message is not None:
-                        attachments = message['attachments']
+                        attachments = message.get('attachments', None)
 
                         if attachments is not None:
                             for att in attachments:
