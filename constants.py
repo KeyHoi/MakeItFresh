@@ -4,6 +4,7 @@ FB_SEND_API_URL = 'https://graph.facebook.com/v2.6/me/messages?access_token=' + 
 
 JUST_IMG_MSG = 'Bitte nur ein Bild von einem Barcodes an mich senden.'
 
-BETTER_IMG = 'Die Barcodes müssen scharf, horizontal ausgerichtet sein und den Großteil des Bildes einnehmen.'
+BETTER_IMG = 'Die Barcodes müssen scharf, horizontal ausgerichtet sein und den Großteil des ' \
+             'Bildes einnehmen. Bitte versuchen sie es erneut.'
 
-LIMITED_DB = 'Dieser Prototyp hat leider eine begrenzte Kapazität.'
+LIMITED_DB = 'Produkt nicht verfügbar'
