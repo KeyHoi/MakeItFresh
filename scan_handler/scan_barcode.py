@@ -1,4 +1,3 @@
-import os
 import urllib.request
 import urllib.request
 
@@ -7,7 +6,7 @@ import zbar
 from PIL import Image
 
 
-def scan(url):
+def scan(url, barcode):
     file_path = './tmp.jpg'
 
     try:
@@ -18,6 +17,7 @@ def scan(url):
         print("Start scanning")
         image_array = numpy.array(image.getdata(), numpy.uint8)
         scanner = zbar.Scanner()
+
         results = scanner.scan(image_array)
         print("Finished scanning")
 
@@ -25,7 +25,7 @@ def scan(url):
             result = results[0]
             barcode = result.data.decode('utf-8')
 
-            return barcode
+            return True
 
     except Exception as e:
         print("ERROR while scanning image")
