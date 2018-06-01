@@ -10,7 +10,7 @@ def scan(url):
     file_path = './tmp.jpg'
 
     try:
-        print("Downloading image temporarily")
+        print("Downloading image temporarily to {}".format(file_path))
         urllib.request.urlretrieve(url, file_path)
         image = Image.open(file_path)
 
@@ -24,6 +24,7 @@ def scan(url):
         if len(results) > 0:
             result = results[0]
             barcode = result.data.decode('utf-8')
+            print("Scanned barcode: {}".format(barcode))
 
             return barcode
 

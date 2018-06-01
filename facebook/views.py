@@ -12,6 +12,8 @@ from scan_handler.scan_barcode import scan
 @csrf_exempt
 def connection_handler(request):
     print("connection handler triggered")
+
+    # just sebhook subscriptions
     if request.method == 'GET':
         VERIFY_TOKEN = "3153b67bfc6c51a17fd558976844c6bf"
 
@@ -27,90 +29,59 @@ def connection_handler(request):
         else:
             return HttpResponse(status=403)
 
+    # POST request -> webhook event
     else:
         body = request.body.decode('utf-8')
         body = json.loads(body)
 
-        if body['object'] == 'page':
-            for entry in body['entry']:
-                for webhook_event in entry['messaging']:
-
+        if body.get('object', '') == 'page':
+            for entry in body.get('entry', []):
+                for webhook_event in entry.get('messaging',[]):
                     print('Webhook Event: \n{}'.format(webhook_event))
 
-                    source_id = webhook_event['sender']['id']
-                    message = webhook_event.get('message', None)
+                    source_id = webhook_event.get('sender', {}).get('id', '-1')
+                    if source_id != -1:
 
-                    if message is not None:
-                        attachments = message.get('attachments', None)
+                        message = webhook_event.get('message', None)
+                        if message is not None:     # check if message
 
-                        if attachments is not None and len(attachments) > 0:
-                            att = attachments[0]
-                            if att['type'] == 'image':
-                                image_url = att['payload']['url']
-                                barcode = 4029764001807
-                                barcode = scan(image_url)
-                                print("Scanned barcode: {}".format(barcode))
+                            msg = ''
+                            api_url = c.FB_SEND_API_URL
 
-                                if barcode is not None and barcode != -1:
-                                    try:
-                                        product = Product.objects.get(barcode=barcode)
+                            attachments = message.get('attachments', None)
+                            if attachments is not None and len(attachments) > 0:    # check for attachements
 
-                                        receipt = Receipt.objects.get(product=product)
+                                for att in attachments:     # check every attachement
+                                    if att['type'] == 'image':
 
-                                        receipt_json = receipt.receipt
-                                        print("Receipt: \n{}".format(receipt_json))
+                                        image_url = att['payload']['url']
+                                        barcode = scan(image_url)
+                                        if barcode is not None and barcode != -1:   # check if scan was successful
 
-                                        msg = str(receipt_json['header']) + '\n\n'
-                                        for par in receipt_json['paragraphs']:
-                                            msg += par + '\n'
+                                            try:    # barcode is in DB
+                                                product = Product.objects.get(barcode=barcode)
+                                                receipt = Receipt.objects.get(product=product)
+                                                receipt_json = receipt.receipt
 
-                                        print("Message: {}\n".format(msg))
+                                                print("Receipt: \n{}".format(receipt_json))
 
-                                        url = c.FB_SEND_API_URL
-                                        res = requests.post(url, json={
-                                            "recipient": {
-                                                "id": source_id
-                                            },
-                                            "message": {
-                                                "text": msg
-                                            }
-                                        })
+                                                msg = str(receipt_json['header']) + '\n\n'
+                                                for par in receipt_json['paragraphs']:
+                                                    msg += par + '\n'
 
-                                        assert res.status_code == 200
-                                    except Exception as e:
-                                        print(e)
-                                        msg = c.LIMITED_DB
-                                        url = c.FB_SEND_API_URL
+                                            except Exception as e:
+                                                print(e)
+                                                msg = c.LIMITED_DB
+                                        else:
+                                            msg = c.BETTER_IMG
+                                    else:
+                                        msg = c.JUST_IMG_MSG
+                            else:
+                                msg = c.JUST_IMG_MSG
 
-                                        res = requests.post(url, json={
-                                            "recipient": {
-                                                "id": source_id
-                                            },
-                                            "message": {
-                                                "text": msg
-                                            }
-                                        })
+                            print("Message: {}\n".format(msg))
 
-                                        assert res.status_code == 200
-                                else:
-                                    msg = c.BETTER_IMG
-                                    url = c.FB_SEND_API_URL
-
-                                    res = requests.post(url, json={
-                                        "recipient": {
-                                            "id": source_id
-                                        },
-                                        "message": {
-                                            "text": msg
-                                        }
-                                    })
-
-                                    assert res.status_code == 200
-                        else:
-                            msg = c.JUST_IMG_MSG
-                            url = c.FB_SEND_API_URL
-
-                            res = requests.post(url, json={
+                            res = requests.post(api_url, json={
                                 "recipient": {
                                     "id": source_id
                                 },
@@ -119,7 +90,6 @@ def connection_handler(request):
                                 }
                             })
 
-                            assert res.status_code == 200
-            return HttpResponse(status=200)
-        else:
-            return HttpResponse(status=404)
+                            return HttpResponse(status=res.status_code)
+
+        return HttpResponse(status=404)

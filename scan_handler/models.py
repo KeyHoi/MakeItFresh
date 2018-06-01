@@ -1,5 +1,5 @@
-from django.contrib.postgres.fields import JSONField
-from django.db.models import Model, TextField, ForeignKey, CASCADE
+from django.contrib.postgres.fields import JSONField, ArrayField
+from django.db.models import Model, TextField, ForeignKey, URLField, CASCADE
 
 
 # Create your models here.
@@ -12,7 +12,7 @@ class Product(Model):
         return self.manufacturer + ' - ' + self.name
 
 
-class Receipt(Model):
+class Receipt(Model):  # TODO change ro ReceiptNew model
     receipt = JSONField(null=False, blank=False)
     product = ForeignKey(Product, null=True, on_delete=CASCADE)
 
@@ -23,3 +23,13 @@ class Receipt(Model):
             return to_return
         except:
             return "None"
+
+
+class ReceiptNew(Model):
+    header = TextField(blank=True, null=False, default='', max_length=150)
+    ingredients = ArrayField(base_field=TextField, null=False, default=[])
+    url = URLField(blank=True, null=False, default='', max_length=150)
+    paragraphs = ArrayField(base_field=TextField, null=False, default=[])
+
+    def __str__(self):
+        return self.header
