@@ -11,9 +11,11 @@ def scan(url):
     file_path = './tmp.jpg'
 
     try:
+        print("Downloading image temporarily")
         urllib.request.urlretrieve(url, file_path)
         image = Image.open(file_path)
 
+        print("Start scanning")
         image_array = numpy.array(image.getdata(), numpy.uint8)
         scanner = zbar.Scanner()
         results = scanner.scan(image_array)

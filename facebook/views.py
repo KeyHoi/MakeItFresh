@@ -47,8 +47,9 @@ def connection_handler(request):
                             att = attachments[0]
                             if att['type'] == 'image':
                                 image_url = att['payload']['url']
-                                # barcode = scan(image_url)
-                                barcode = 4029764001807
+                                print("Scanning image of barcode...")
+                                barcode = scan(image_url)
+                                # barcode = 4029764001807
                                 print("Scanned barcode: {}".format(barcode))
 
                                 try:
