@@ -51,21 +51,51 @@ def connection_handler(request):
                                 barcode = scan(image_url)
                                 print("Scanned barcode: {}".format(barcode))
 
-                                try:
-                                    product = Product.objects.get(barcode=barcode)
+                                if barcode is not None and barcode != -1:
+                                    try:
+                                        product = Product.objects.get(barcode=barcode)
 
-                                    receipt = Receipt.objects.get(product=product)
+                                        receipt = Receipt.objects.get(product=product)
 
-                                    receipt_json = receipt.receipt
-                                    print("Receipt: \n{}".format(receipt_json))
+                                        receipt_json = receipt.receipt
+                                        print("Receipt: \n{}".format(receipt_json))
 
-                                    msg = str(receipt_json['header']) + '\n\n'
-                                    for par in receipt_json['paragraphs']:
-                                        msg += par + '\n'
+                                        msg = str(receipt_json['header']) + '\n\n'
+                                        for par in receipt_json['paragraphs']:
+                                            msg += par + '\n'
 
-                                    print("Message: {}\n".format(msg))
+                                        print("Message: {}\n".format(msg))
 
+                                        url = c.FB_SEND_API_URL
+                                        res = requests.post(url, json={
+                                            "recipient": {
+                                                "id": source_id
+                                            },
+                                            "message": {
+                                                "text": msg
+                                            }
+                                        })
+
+                                        assert res.status_code == 200
+                                    except Exception as e:
+                                        print(e)
+                                        msg = c.LIMITED_DB
+                                        url = c.FB_SEND_API_URL
+
+                                        res = requests.post(url, json={
+                                            "recipient": {
+                                                "id": source_id
+                                            },
+                                            "message": {
+                                                "text": msg
+                                            }
+                                        })
+
+                                        assert res.status_code == 200
+                                else:
+                                    msg = c.BETTER_IMG
                                     url = c.FB_SEND_API_URL
+
                                     res = requests.post(url, json={
                                         "recipient": {
                                             "id": source_id
@@ -76,8 +106,6 @@ def connection_handler(request):
                                     })
 
                                     assert res.status_code == 200
-                                except Exception as e:
-                                    print(e)
                         else:
                             msg = c.JUST_IMG_MSG
                             url = c.FB_SEND_API_URL

@@ -29,3 +29,5 @@ def scan(url):
 
     except Exception as e:
         print("ERROR while scanning image")
+
+    return -1
