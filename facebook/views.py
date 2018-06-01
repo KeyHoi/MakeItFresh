@@ -1,4 +1,5 @@
 import json
+import time
 
 import requests
 import threading
@@ -52,6 +53,7 @@ def connection_handler(request):
                                 # barcode = 4029764001807
                                 barcode = -1
                                 threading.Thread(target=scan, args=(image_url, barcode), daemon=True).start()
+                                time.sleep(5)
                                 # barcode = scan(image_url)
                                 print("Scanned barcode: {}".format(barcode))
 
