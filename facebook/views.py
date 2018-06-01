@@ -1,9 +1,6 @@
 import json
-import time
-
-import queue
 import requests
-import threading
+
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -50,12 +47,8 @@ def connection_handler(request):
                             att = attachments[0]
                             if att['type'] == 'image':
                                 image_url = att['payload']['url']
-                                print("Scanning image of barcode...")
-                                q = queue.Queue(maxsize=1)
-                                threading.Thread(target=scan, args=(image_url, q), daemon=True).start()
-                                time.sleep(5)
-                                # barcode = 4029764001807
-                                barcode = q.get()
+                                barcode = 4029764001807
+                                # barcode = scan(image_url)
                                 print("Scanned barcode: {}".format(barcode))
 
                                 try:

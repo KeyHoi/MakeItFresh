@@ -6,7 +6,7 @@ import zbar
 from PIL import Image
 
 
-def scan(url, q):
+def scan(url):
     file_path = './tmp.jpg'
 
     try:
@@ -24,9 +24,8 @@ def scan(url, q):
         if len(results) > 0:
             result = results[0]
             barcode = result.data.decode('utf-8')
-            q.put(barcode)
 
-            return True
+            return barcode
 
     except Exception as e:
         print("ERROR while scanning image")
