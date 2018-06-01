@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7873ead-279c-4629-9c38-c6a971d4496c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/facebook/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scan_handler/scan_barcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/scan_handler/scan_barcode.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="scan_barcode.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scan_handler/scan_barcode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -528,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_handler/scan_barcode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="270">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
       </provider>
     </entry>

@@ -19,6 +19,7 @@ def scan(url):
         image_array = numpy.array(image.getdata(), numpy.uint8)
         scanner = zbar.Scanner()
         results = scanner.scan(image_array)
+        print("Finished scanning")
 
         if len(results) > 0:
             result = results[0]
