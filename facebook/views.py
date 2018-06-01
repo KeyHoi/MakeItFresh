@@ -1,7 +1,7 @@
 import json
 import time
 
-import Queue
+import queue
 import requests
 import threading
 from django.http import HttpResponse
@@ -51,11 +51,11 @@ def connection_handler(request):
                             if att['type'] == 'image':
                                 image_url = att['payload']['url']
                                 print("Scanning image of barcode...")
-                                queue = Queue(maxsize=1)
-                                threading.Thread(target=scan, args=(image_url, queue), daemon=True).start()
+                                q = queue.Queue(maxsize=1)
+                                threading.Thread(target=scan, args=(image_url, q), daemon=True).start()
                                 time.sleep(5)
                                 # barcode = 4029764001807
-                                barcode = queue.get()
+                                barcode = q.get()
                                 print("Scanned barcode: {}".format(barcode))
 
                                 try:

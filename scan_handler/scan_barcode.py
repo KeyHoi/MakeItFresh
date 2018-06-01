@@ -6,7 +6,7 @@ import zbar
 from PIL import Image
 
 
-def scan(url, queue):
+def scan(url, q):
     file_path = './tmp.jpg'
 
     try:
@@ -24,7 +24,7 @@ def scan(url, queue):
         if len(results) > 0:
             result = results[0]
             barcode = result.data.decode('utf-8')
-            queue.put(barcode)
+            q.put(barcode)
 
             return True
 
