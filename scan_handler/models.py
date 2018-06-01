@@ -27,9 +27,12 @@ class Receipt(Model):  # TODO change ro ReceiptNew model
 
 class ReceiptNew(Model):
     header = TextField(blank=True, null=False, default='', max_length=150)
-    ingredients = ArrayField(base_field=TextField, null=False, default=[])
+    ingredients = ArrayField(base_field=TextField(blank=True, null=False, default='', max_length=150),
+                             null=False, default=[])
     url = URLField(blank=True, null=False, default='', max_length=150)
-    paragraphs = ArrayField(base_field=TextField, null=False, default=[])
+    paragraphs = ArrayField(base_field=TextField(blank=True, null=False, default='', max_length=150),
+                            null=False, default=[])
+    product = ForeignKey(Product, null=True, on_delete=CASCADE)
 
     def __str__(self):
         return self.header

@@ -1,2 +1,4 @@
 env/
 receipts/
+__pycache__/
+*/__pycache__/
