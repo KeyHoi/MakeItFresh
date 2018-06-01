@@ -48,7 +48,7 @@ def connection_handler(request):
                             if att['type'] == 'image':
                                 image_url = att['payload']['url']
                                 barcode = 4029764001807
-                                # barcode = scan(image_url)
+                                barcode = scan(image_url)
                                 print("Scanned barcode: {}".format(barcode))
 
                                 try:
