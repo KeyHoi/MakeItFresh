@@ -17,10 +17,9 @@ class Receipt(Model):
     product = ForeignKey(Product, null=True, on_delete=CASCADE)
 
     def __str__(self):
-        print("============================")
-        print(self)
-        print(self is None)
-        if type(self) is None or type(self) == 'NoneType':
+        to_return = ''
+        try:
+            to_return = str(self.product.name) + '(' + str(self.product.manufacturer) + ')'
+            return to_return
+        except:
             return "None"
-        else:
-            return str(self.product.name) + '(' + str(self.product.manufacturer) + ')'
