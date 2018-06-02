@@ -58,7 +58,7 @@ def add_receipt_with_product(json_dict):
     product = None
     try:
         product = models.Product.objects.get(barcode=barcode)
-    except:
+    except Exception as e:
         pass
 
     receipt = models.Receipt(header=header, ingredients=ingredients, paragraphs=paragraphs,
@@ -86,7 +86,7 @@ def get_receipt_template(request, id=-1):
             print(e)
         # TODO load receipt in template
         # TODO load HTML template + css stylesheet
-        # TODO return template
+        # TODO return template + HTTP response
 
         return HttpResponse(status=200)
 

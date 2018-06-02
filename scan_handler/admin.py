@@ -30,9 +30,11 @@ class ReceiptAdmin(admin.ModelAdmin):
         pass
 
     def save_model(self, request, obj, form, change):
+        """
         if obj.url == '':
             obj.save()
             obj.url = c.RECEIPT_BASE_URL + str(obj.id) + "/"
+        """
 
         obj.save()
 
