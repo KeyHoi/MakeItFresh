@@ -69,6 +69,22 @@ def connection_handler(request):
                                                 for par in receipt_json['paragraphs']:
                                                     msg += par + '\n'
 
+                                                if barcode == 8076800195033:
+                                                    res = requests.post(api_url, json={
+                                                        "recipient": {
+                                                            "id": source_id
+                                                        },
+                                                        "message": {
+                                                            "attachment": {
+                                                                "type": "image",
+                                                                "payload": {
+                                                                    "url": "https://static.chefkoch-cdn.de/ck.de/rezepte/132/132850/1110326-420x280-fix-spaghetti-bolognese.jpg",
+                                                                    "is_reusable": "true"
+                                                                }
+                                                            }
+                                                        }
+                                                    })
+
                                             except Exception as e:
                                                 print(e)
                                                 msg = c.LIMITED_DB
