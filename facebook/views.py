@@ -68,9 +68,7 @@ def connection_handler(request):
                                                     msg += par + '\n'
 
                                                 print("=======================")
-                                                print("Barcode Data Type: {}".format(type(barcode)))
-                                                print(int(barcode) == 8076800195033)
-                                                if barcode == 8076800195033:
+                                                if int(barcode) == 8076800195033:
                                                     print("IMAGE SENDING")
                                                     res = requests.post(api_url, json={
                                                         "recipient": {
