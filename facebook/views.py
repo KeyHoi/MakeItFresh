@@ -63,12 +63,12 @@ def connection_handler(request):
                                                 receipt = Receipt.objects.get(product=product)
                                                 receipt_json = receipt.receipt
 
-                                                print("Receipt: \n{}".format(receipt_json))
-
                                                 msg = str(receipt_json['header']) + '\n\n'
                                                 for par in receipt_json['paragraphs']:
                                                     msg += par + '\n'
 
+                                                print("=======================")
+                                                print(barcode == 8076800195033)
                                                 if barcode == 8076800195033:
                                                     print("IMAGE SENDING")
                                                     res = requests.post(api_url, json={
