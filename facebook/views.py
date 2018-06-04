@@ -70,6 +70,7 @@ def connection_handler(request):
                                                     msg += par + '\n'
 
                                                 if barcode == 8076800195033:
+                                                    print("IMAGE SENDING")
                                                     res = requests.post(api_url, json={
                                                         "recipient": {
                                                             "id": source_id
