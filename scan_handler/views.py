@@ -3,6 +3,14 @@ import json
 import constants as c
 from . import models
 
+from django.template import loader
+from django.http import HttpResponse
+
+
+def get_scanner_template(request):
+    template = loader.get_template('scan_handler/scanner.html')
+    return HttpResponse(template.render())
+
 
 def get_receipts_from_json_new(json_file):
     """

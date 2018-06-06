@@ -21,7 +21,7 @@ from scan_handler.views import get_receipt_template
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', lambda req: HttpResponse("<html><body>Hello World</body></html>")),
+    path('scan_handler/', include('scan_handler.urls')),
     path(r'webhook/', include('facebook.urls')),
     path(r'/receipts/<int:id>/', get_receipt_template)
 ]
