@@ -9,7 +9,10 @@ from django.shortcuts import render_to_response
 
 def get_scanner_template(request):
     template = loader.get_template('scan_handler/scanner.html')
-    return render_to_response(template.render())
+    print(template is None)
+    template_r = template.render()
+    print(template_r is None)
+    return render_to_response(template_r)
 
 
 def get_receipts_from_json_new(json_file):
