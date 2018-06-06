@@ -14,12 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.http import HttpResponse
 from django.urls import path, include
 
 from scan_handler.views import get_receipt_template
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test/', lambda req: HttpResponse("<html><body>Hello World</body></html>")),
     path(r'webhook/', include('facebook.urls')),
     path(r'/receipts/<int:id>/', get_receipt_template)
 ]

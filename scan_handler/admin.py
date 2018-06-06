@@ -39,10 +39,10 @@ class ReceiptAdmin(admin.ModelAdmin):
         obj.save()
 
 
-@admin.register(barcode_models.ReceiptNew)
-class ReceiptNewAdmin(admin.ModelAdmin):
-    list_display = ('header', 'product')
-    list_display_links = ('header', 'product')
+@admin.register(barcode_models.Recipe)
+class RecipeAdmin(admin.ModelAdmin):
+    list_display = ('recipe_name',)
+    list_display_links = ('recipe_name',)
     actions = ['export_to_json', 'import_from_json']
 
     def export_to_json(self):
@@ -54,6 +54,12 @@ class ReceiptNewAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         if obj.url == '':
             obj.save()
-            obj.url = c.RECEIPT_BASE_URL + str(obj.id) + "/"
+            obj.recipe_url = c.RECEIPT_BASE_URL + str(obj.id) + "/"
 
         obj.save()
+
+
+@admin.register(barcode_models.RecipeProduct)
+class RecipeProductAdmin(admin.ModelAdmin):
+    list_display = ('recipe', 'product')
+    list_display_links = ('recipe', 'product')
