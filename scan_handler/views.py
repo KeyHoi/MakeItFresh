@@ -4,12 +4,12 @@ import constants as c
 from . import models
 
 from django.template import loader
-from django.http import HttpResponse
+from django.shortcuts import render_to_response
 
 
 def get_scanner_template(request):
     template = loader.get_template('scan_handler/scanner.html')
-    return HttpResponse(template.render())
+    return render_to_response(template.render())
 
 
 def get_receipts_from_json_new(json_file):

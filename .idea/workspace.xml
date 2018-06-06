@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7873ead-279c-4629-9c38-c6a971d4496c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/scan_handler/templates/scan_handler/scanner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scan_handler/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facebook/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/facebook/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make_it_fresh_2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_it_fresh_2/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scan_handler/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scan_handler/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/scan_handler/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -587,7 +582,7 @@
     <entry file="file://$PROJECT_DIR$/scan_handler/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
