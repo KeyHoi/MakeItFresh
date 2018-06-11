@@ -27,7 +27,7 @@ SECRET_KEY = '@+5hf=!moqia%1f)2i7(hklzq9jqwj=a2=29r_$d_%-%tjq*wt'
 DEBUG = True
 
 ALLOWED_HOSTS = ['makeitfresh.herokuapp.com', 'localhost']
-APPEND_SLASH=False
+APPEND_SLASH = False
 
 # Application definition
 
@@ -89,7 +89,7 @@ DATABASES = {
 
 DATABASES = {
     'default': dj_database_url.parse(
-    'postgres://gptmspgsahqkgk:a0d6c20cf5abc30f386c1b48b7a7348a393a60b1b370818948d21107ac6f0489@ec2-54-235-132-202.compute-1.amazonaws.com:5432/df7lrjkn3d1v0m')
+        'postgres://gptmspgsahqkgk:a0d6c20cf5abc30f386c1b48b7a7348a393a60b1b370818948d21107ac6f0489@ec2-54-235-132-202.compute-1.amazonaws.com:5432/df7lrjkn3d1v0m')
 }
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
