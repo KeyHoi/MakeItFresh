@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('scan_handler/', include('scan_handler.urls')),
     path(r'webhook/', include('facebook.urls')),
+    path(r'distribute/', include('django_mobile_app_distribution.urls')),
+    path(r'accounts/', include('django_mobile_app_distribution.auth_urls')),
     path(r'/receipts/<int:id>/', get_receipt_template)
 ]

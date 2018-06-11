@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7873ead-279c-4629-9c38-c6a971d4496c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/make_it_fresh_2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_it_fresh_2/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scan_handler/templates/scan_handler/scanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/scan_handler/templates/scan_handler/scanner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scan_handler/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scan_handler/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scan_handler/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scan_handler/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_it_fresh_2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_it_fresh_2/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +18,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scan_handler/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="510">
               <caret line="35" column="106" selection-start-line="35" selection-start-column="106" selection-end-line="35" selection-end-column="106" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scan_handler/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="45">
               <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -44,7 +42,7 @@
       <file leaf-file-name="scanner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scan_handler/templates/scan_handler/scanner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="150">
               <caret line="10" column="93" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
             </state>
           </provider>
@@ -53,7 +51,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scan_handler/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="105">
               <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -62,13 +60,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/make_it_fresh_2/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+            <state relative-caret-position="427">
+              <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
               <folding>
                 <element signature="e#316#325#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/make_it_fresh_2/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+              <folding>
+                <element signature="e#639#671#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,11 +87,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/facebook/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="45">
               <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +96,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/facebook/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
+            <state relative-caret-position="915">
               <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -117,6 +124,7 @@
       <find>save</find>
       <find>add_receipt_with_opt_product</find>
       <find>ReceiptNew</find>
+      <find>BASE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,12 +146,12 @@
         <option value="$PROJECT_DIR$/facebook/views.py" />
         <option value="$PROJECT_DIR$/scan_handler/admin.py" />
         <option value="$PROJECT_DIR$/scan_handler/models.py" />
-        <option value="$PROJECT_DIR$/make_it_fresh_2/urls.py" />
         <option value="$PROJECT_DIR$/facebook/urls.py" />
         <option value="$PROJECT_DIR$/scan_handler/urls.py" />
         <option value="$PROJECT_DIR$/scan_handler/templates/scan_handler/scanner.html" />
         <option value="$PROJECT_DIR$/scan_handler/views.py" />
         <option value="$PROJECT_DIR$/make_it_fresh_2/settings.py" />
+        <option value="$PROJECT_DIR$/make_it_fresh_2/urls.py" />
       </list>
     </option>
   </component>
@@ -156,7 +164,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="30" />
     <option name="width" value="1366" />
     <option name="height" value="738" />
@@ -166,6 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,36 +185,12 @@
             <path>
               <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
               <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="facebook" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
               <item name="make_it_fresh_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="scan_handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="scan_handler" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MakeItFresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MakeItFresh" type="462c0819:PsiDirectoryNode" />
-              <item name="scan_handler" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="scan_handler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,7 +251,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1366" height="738" extended-state="0" />
+    <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -275,8 +260,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32896176" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21140732" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -304,7 +289,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/facebook/webhook/package.json" />
     <entry file="file://$PROJECT_DIR$/make_it_fresh_2/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -520,7 +504,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/facebook/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
+        <state relative-caret-position="915">
           <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -530,7 +514,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_handler/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="510">
           <caret line="35" column="106" selection-start-line="35" selection-start-column="106" selection-end-line="35" selection-end-column="106" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
@@ -542,35 +526,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/make_it_fresh_2/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="52" selection-end-line="27" />
-          <folding>
-            <element signature="e#639#671#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/facebook/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="45">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_handler/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="45">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -580,14 +548,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_handler/templates/scan_handler/scanner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="150">
           <caret line="10" column="93" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_handler/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="105">
           <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -597,10 +565,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/make_it_fresh_2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+        <state relative-caret-position="427">
+          <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
           <folding>
             <element signature="e#316#325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_it_fresh_2/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#639#671#0" expanded="true" />
           </folding>
         </state>
       </provider>

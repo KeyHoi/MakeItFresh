@@ -6,3 +6,4 @@ psycopg2==2.7.4
 dj-database-url==0.5.0
 gunicorn==19.7.1
 requests==2.18.4
+django-mobile-app-distribution==0.5
